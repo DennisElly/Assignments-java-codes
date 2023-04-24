@@ -1,0 +1,60 @@
+import java.io.*;
+import java.util.*;
+
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String day = sc.nextLine();
+
+        sc.close();
+
+        String openTime, closeTime;
+
+        
+
+        switch(day) {
+
+            case "Monday":
+
+            case "Tuesday":
+
+            case "Wednesday":
+
+            case "Thursday":
+
+            case "Friday":
+
+                openTime = "8:30";
+
+                closeTime = "5:30";
+
+                break;
+
+            case "Saturday":
+
+                openTime = "9:30";
+
+                closeTime = "4:30";
+
+                break;
+
+            default:
+
+                System.out.println("Library is closed");
+
+                return;
+
+        }
+
+        
+
+        System.out.println(openTime + " " + closeTime);
+
+    }
+
+}

@@ -1,0 +1,67 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int no=sc.nextInt();
+        int opt=sc.nextInt();
+        if(no>0 && (opt>=1 && opt<=4))
+        {
+            
+        if(opt==1)
+        {
+            if(no%2==0)
+            {
+                System.out.println("Yes");
+            }
+            else{
+                System.out.println("NO");
+            }
+        }
+        else if(opt==2)
+        {
+            if(no%2!=0)
+            {
+                System.out.println("Yes");
+            }
+            else{
+                System.out.println("NO");
+            }
+        }
+        else if(opt==3)
+        {
+            int m=no/2,flag=0;
+            if(no==0||no==1)
+            {
+                System.out.println("NO");
+            }
+            else{
+                for(int i=2;i<=m;i++)
+                {
+                    if(no%i==0)
+                    {
+                        System.out.println("NO");
+                        flag=1;
+                        break;
+                    }
+                }
+                if(flag==0)
+                {
+                    System.out.println("Yes");
+                }
+            }
+        }
+        else{
+            int fac=1;
+            for(int i=no;i>0;i--)
+            {
+                fac=fac*i;
+            }
+            System.out.println(fac);
+        }
+        }
+    }
+}

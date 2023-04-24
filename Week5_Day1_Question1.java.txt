@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+class Complex {
+    private int real;
+    private int imaginary;
+
+    // Default constructor
+    public Complex() {
+        real = 0;
+        imaginary = 0;
+    }
+
+    // Parameterized constructor
+    public Complex(int real, int imaginary) {
+        this.real = real;
+        this.imaginary = imaginary;
+    }
+
+    // Method to multiply two complex numbers
+    public Complex Mul_Complex(Complex c1, Complex c2) {
+        int realPart = (c1.real * c2.real) - (c1.imaginary * c2.imaginary);
+        int imaginaryPart = (c1.real * c2.imaginary) + (c1.imaginary * c2.real);
+        return new Complex(realPart, imaginaryPart);
+    }
+
+    // Method to display the complex number
+    public void Display() {
+        if (imaginary < 0) {
+            System.out.println(real + "" + imaginary + "i");
+        } else {
+            System.out.println(real + "+" + imaginary + "i");
+        }
+    }
+}
+
+public class Test_Complex {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Reading the real and imaginary parts of the first complex number
+        int real1 = sc.nextInt();
+        int imaginary1 = sc.nextInt();
+        Complex c1 = new Complex(real1, imaginary1);
+
+        // Reading the real and imaginary parts of the second complex number
+        int real2 = sc.nextInt();
+        int imaginary2 = sc.nextInt();
+        Complex c2 = new Complex(real2, imaginary2);
+
+        // Multiplying the two complex numbers
+        Complex product = new Complex().Mul_Complex(c1, c2);
+
+        // Displaying the result
+        product.Display();
+    }
+}

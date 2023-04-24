@@ -1,0 +1,30 @@
+import java.util.scanner;
+class volume
+
+{
+
+        int l;
+        public int w;
+        static int h=0;
+}
+
+
+class Mainvolume
+{
+
+        public static void main(string[] args)
+        {
+                scanner sc=new Scanner(system.in);
+
+
+                volume v=new volume();
+                volume v1= volume();
+
+                system.out.println();
+                system.out.println();
+                system.out.println();
+                system.out.println();
+                system.out.println();
+                system.out.println();
+        }
+}

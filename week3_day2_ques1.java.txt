@@ -1,0 +1,28 @@
+import java.util.scanner,
+
+      intnum1
+      
+class infer
+{
+        int num1;
+        int num2;
+        infer()
+        {
+
+      
+        }
+        int calculate()
+        {
+
+                int multiply=num1*num2;
+                return(multiply);
+                
+        }
+}
+classs MainInfer
+{
+         
+           public static void main(String arg[])
+           {
+                  infer i=new infer();
+                  i.calculate();
